@@ -1,0 +1,104 @@
+-----------------------------------------Recursion---------------------------------------------------
+Recursion->The process in which a function calls itself directly or indirectly is called recursion.
+Recursion having two phase, first one is calling phase and another is returning phase.
+Example:
+void fun(int n)
+{
+	if(n>0)
+	{
+		print(n);
+		fun(n-1);
+	}
+}
+Types of Recursion:
+1.Tail Recursion-> When a function calling itself and after that there is no statement i.e last statement. Everything is done at Calling phase.
+void fun(int n)
+{
+	if(n>0)
+	{
+		print(n);
+		fun(n-1);  // this is the last statement in this function 
+	}
+}
+Time complexity is O(n)  
+
+->Tail recursion can be easily converted into loop , so better to write loop when we written tail recursion because loop have less space complexity. Recursion uses stack memory this led to full stack memory.
+
+2. Head Recursion-> It is just opposite to the tail Recursuon. The first statement will be a function calling.Everything is done at returning phase i.e unlike tail recursion
+Example:
+void fun(int n)
+{
+	if(n>0)
+	{
+		fun(n-1);
+		print(n);
+	}
+}
+Time complexity is O(n)
+
+3. Tree Recursion-> when a function call itself more than one time.
+Example:
+void fun(int n)
+{
+	if(n>0)
+	{
+		printn(n)
+		fun(n-1);
+		fun(n-1);
+		print(n);
+	}
+}
+
+Time Complexity is O(2^n)
+
+4.Indirect Recursion-> It is just like a cylic i.e  If a function 'A' call the function 'B' and 'B' again call the function 'A'
+Example: 
+
+void funA(int n)
+{
+	if(n>0)
+	{
+		print(n);
+		funB(n-1);
+	}
+}
+
+void funB(int n)
+{
+	if(n>1)
+	{
+		print(n);
+		funA(n/2);
+	}
+}
+
+5.Nested Recursion-> when a function and inside that function same function calling itself called recursion but in this the parameter we passed is again that same function called Nested Recursrion.
+Example:
+
+int fun(int n)
+{
+ 	 if(n>100)
+ 	 {
+	  return n-10;
+	  }
+	  else
+	  {
+	  return fun(fun(n+11));  // Nested Recursion
+	  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
