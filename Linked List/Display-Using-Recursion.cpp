@@ -52,7 +52,7 @@ void RDisplay(struct Node *temp)
 		if(temp!=NULL) // if we write (temp->next!=NULL) than it will not print the last node
 		{
 			cout<<temp->data<<" ";
-			RDisplay(temp->next);      // Using Recursion
+			RDisplay(temp->next);      // Tail Recursion
 		}
 }	
 
@@ -64,3 +64,6 @@ int main()
 	create(n);
 	RDisplay(head);
 }
+
+// Time Complexu=ity is O(n)
+// Space Complexity is O(n+1) => O(n)

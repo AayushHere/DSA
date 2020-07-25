@@ -69,4 +69,7 @@ int main()
 	maxx();
 	
 }
+// Time Complexity is O(n) => In Worst Case i.e if maximum is present at the end of Linked List
+
+// Space Complexity is O(1)
 

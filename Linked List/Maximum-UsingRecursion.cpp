@@ -52,7 +52,7 @@ int RMax(Node *temp)
 	}
 	else
 	{
-		max=RMax(temp->next);
+		max=RMax(temp->next);     // Head Recursion
 		return(max>temp->data)?max:temp->data;
 	}
 }
@@ -64,3 +64,7 @@ int main()
 	result =RMax(head);
 	cout<<"Maximum element is ="<<result;
 }
+
+// Time Complexity is O(n)
+
+// Space Complexity is O(n+1) => O(n)

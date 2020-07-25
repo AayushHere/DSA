@@ -66,3 +66,6 @@ int main()
 	create(n);
 	count();
 }
+
+// Time Complexity is O(n)
+//Space Complexity is O(1)
