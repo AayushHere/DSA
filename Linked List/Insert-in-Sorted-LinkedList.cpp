@@ -1,3 +1,4 @@
+// To insert a node in a sorted Linked List
 #include<iostream>
 using namespace std;
 struct Node{
@@ -45,16 +46,13 @@ void insertSorted(int data)
 		struct Node *t=new Node;
 		t->data=data;
 		t->next=head;
-		head=t;
-
-		
-}
+		head=t;		
+	}
 	else
 	{
 		struct Node *insert= new Node;
 		insert->data=data;
-	insert->next=NULL;
-		
+		insert->next=NULL;
 		while(p!=NULL && p->data<data)   // // this condition is for in between or in the last of the linked list 
 		{
 			q=p;   // I'm using two pointer q and p  
@@ -89,7 +87,6 @@ int main()
 // Time Complexity is depend on the element which you want to insert.
 
 // The element you want to insert is smallest in size than Time complexity is O(1) i.e constant
-
 
 // Best case O(1), worst case O(n)
 
