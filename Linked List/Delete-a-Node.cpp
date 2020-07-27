@@ -48,12 +48,10 @@ void create(int n)
 
 void Delete(int position)
 {
-	int z=1;
 	struct Node*temp,*q;
 	int x;
 	if(position==0)
 	{
-		z=0;
 		temp=head;
 		x=head->data;
 		cout<<"Element Deleted is = "<<x<<"\n";
@@ -64,9 +62,8 @@ void Delete(int position)
 	{
 		temp=head;
 		q=NULL;
-		for(int i=0;i<position-1;i++)
+		for(int i=0;i<position-1&& temp;i++)
 		{
-			z=0;
 			q=temp;
 			temp=temp->next;
 		}
@@ -75,11 +72,6 @@ void Delete(int position)
 		cout<<"Element Deleted is= "<<x<<"\n";
 		delete temp;   // Deallocate the node from the memeory 
 	}
-	if(z==1)
-	{
-		cout<<"aayush";
-	}
-	
 }
 void display()
 {
