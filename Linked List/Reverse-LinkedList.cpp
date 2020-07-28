@@ -1,6 +1,6 @@
-// To Reverse a Linked List using auxilliary array 
+// To Reverse a Linked List.
 
-// We use two method to reverse an Array
+// We use two method to reverse Linked List
 
 // 1-> In this method we first create a linked list than we copy all the  element into the array
 // now after travesrse we reach last index  of the array now from last index we copy 
