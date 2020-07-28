@@ -1,3 +1,5 @@
+// To concate two Linked List
+
 #include<iostream>
 using namespace std;
 struct Node{
@@ -113,3 +115,6 @@ int main()
 	display();
 	
 }
+
+// Time Complexity depends upon the number of node in the first linked list, if it contain n element
+// than O(n)
