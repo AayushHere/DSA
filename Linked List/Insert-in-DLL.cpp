@@ -1,3 +1,5 @@
+// Insert a node in the Doubly Linked List
+
 #include<iostream>
 using namespace std;
 struct Node{
@@ -113,3 +115,8 @@ int main()
 	insert(position,data,n);
 	display();
 }
+
+
+// Time Complexity is depend on where you want to insert a node
+
+// Best Case O(1) worst case O(n)

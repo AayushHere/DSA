@@ -1,3 +1,5 @@
+// Inserted a node in a sorted Doubly Linked List
+
 #include<iostream>
 using namespace std;
 struct Node{
@@ -56,7 +58,7 @@ void sortedInsert(int data)
 		head=temp;
 		
 	}
-	else if(data<head->data)
+	else if(data<head->data)    // in the beginning i.e the node which we going to insert is smallest
 	{
 		temp->next=head;
 		head->prev=temp;
@@ -71,12 +73,12 @@ void sortedInsert(int data)
 			q=p;
 			p=p->next;
 		}
-		if(p==NULL)
+		if(p==NULL)        // to insert at the last node i.e node which we going to insert having largest data value
 		{
 			q->next=temp;
 			temp->prev=q;
 		}
-		else
+		else            // in between the  first node and  last node
 		{
 			q->next = temp;
             p->prev = temp;
@@ -111,4 +113,8 @@ int main()
 	sortedInsert(data);
 	display();
 }
+
+// Time complexity is depend on the where you are going to insert.
+
+// Best Case O(1) worst case O(n)
 
